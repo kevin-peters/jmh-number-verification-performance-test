@@ -62,7 +62,7 @@ public class NumberVerificationComparisonBenchmark {
 		private final AtomicInteger positive = new AtomicInteger(0);
 		private final AtomicInteger negative = new AtomicInteger(0);
 
-		public IntStream getIntStream() {
+		IntStream getIntStream() {
 			return IntStream.range(0, 10_000_000);
 		}
 
@@ -93,7 +93,6 @@ public class NumberVerificationComparisonBenchmark {
 		blackhole.consume(iterationEnvironment.getPositive().get());
 		blackhole.consume(iterationEnvironment.getNegative().get());
 	}
-
 
 	@Benchmark
 	public void isNumericWithStringUtils(final IterationEnvironment iterationEnvironment, final Blackhole blackhole) {
