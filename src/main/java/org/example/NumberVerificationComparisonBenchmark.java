@@ -46,10 +46,10 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
-@Fork(1)
+//@Fork(1)
+//@Warmup(iterations = 1)
+//@Measurement(iterations = 1)
 @State(Scope.Benchmark)
-@Warmup(iterations = 1)
-@Measurement(iterations = 1)
 @BenchmarkMode(Mode.AverageTime)
 public class NumberVerificationComparisonBenchmark {
 
